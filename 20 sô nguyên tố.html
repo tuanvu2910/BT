@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<input disabled id="output">
+<button  type="button" onclick="f()">Click</button>
+</body>
+<script>
+    function f() {
+        let num = parseInt(document.getElementById("input").value);
+        let number = 1;
+        let tex1 = document.getElementById("output");
+
+        while (number <= num) {
+            let text = "";
+            if (f1(number)) {
+                text += number + " ";
+            }
+            number++;
+        }
+        tex1.innerText = text;
+    }
+
+    function f1(x) {
+        if (x < 2) {
+            return false;
+        } else {
+            for (i = 2; i <= Math.sqrt(x); i++) {
+                if (x % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNam = parseInt(prompt("Sô năm là "));
+    let Currentyear = new Date().getFullYear();
+    function tinhTuoi(x) {
+        if (x > Currentyear){
+            alert("Bạn chưa được sinh ra")
+        }
+        else{
+            soTuoi(x)
+            console.log(x)
+        }
+
+
+    }
+    function soTuoi(x) {
+        let sotuoi = Currentyear - x;
+           document.write(sotuoi);
+
+    }
+    tinhTuoi(parseInt(soNam));
+</script>
+</body>
+</html>
